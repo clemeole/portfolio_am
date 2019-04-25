@@ -3,12 +3,12 @@ $(document).ready(function() {
   $("nav>ul>li").each(function() {
     $(this)
       .mouseenter(function() {
-        $(this).children("span").animate({
+        $(this).children("span").stop().animate({
           width: "95%"
         }, 200);
       })
       .mouseleave(function(){
-        $(this).children("span").animate({
+        $(this).children("span").stop().animate({
           width: "0%"
         }, 200);
       });
