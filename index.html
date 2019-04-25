@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+<div id="loader"></div>
   <header>
     <nav>
       <ul>
@@ -189,8 +189,8 @@
     </div>
 
     <div id="fil_videos">
-      <div class="v">
-        <img id="videoSelected" src="images_videos/balles_tennis.jpg" alt="">
+      <div class="v" id="videoSelected">
+        <img src="images_videos/balles_tennis.jpg" alt="">
         <iframe src="https://www.youtube.com/embed/-EOqxiCMy1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="v">
@@ -209,6 +209,9 @@
         <img src="images_videos/rivieres.jpg" alt="">
         <iframe src="https://www.youtube.com/embed/yJV7qevsCcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+
+
+      <span id="bougebouge"></span>
     </div>
 
   </section>
@@ -221,6 +224,17 @@
   <script src="js/animations.js"></script>
   <script src="js/videos.js"></script>
 
+
+
 </body>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    console.log("c'est bon");
+    $("#loader").remove();
+  });
+</script>
 
 </html>
