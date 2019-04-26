@@ -1,7 +1,7 @@
 @media screen and (max-width: 1060px){
-  
+
 /*   header{display: none} */
-  
+
   #containerPhotos>#sousContainerPhotos>div{
     height: 170px;
     width: 170px;
@@ -12,11 +12,13 @@
 
 #photos {
   //background-color: blueviolet;
-  background-color: rgba(0, 0, 0, 0.6);
+  /*! background-color: rgba(0, 0, 0, 0.6); */
   display: flex;
   align-items: center;
   justify-content: end;
   position: relative;
+  background-image: url("../images/test2.jpg");
+  background-size:  cover;
 }
 
 #bfore{
@@ -93,6 +95,7 @@
   margin: 0.5rem;
   box-shadow: 5px 5px 50px black;
   transition: all .5s ease-in-out;
+  border-radius: 10% 10%;
 }
 }
 
@@ -132,6 +135,7 @@
   //display: none;
   height: 100%;
   object-fit: cover;
+  border-radius: 10% 10%;
 }
 
 #sousContainerPhotos>div>p{
@@ -183,4 +187,5 @@
 #containerPhotos img{
   width: 100%;
   display: inline-block;
+  /*! border-radius: 10% 10%; */
 }

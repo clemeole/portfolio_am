@@ -10,29 +10,34 @@ $(document).ready(function() {
   //bougebouge.css("left", $("#videoSelected").offset().left - $("#fil_videos").offset().left - 2);
 
   fil_videos_images.on("click", function() {
-    setVideoSelected($(this));
-    setSrcVideoSelected($(this).children("iframe").attr("src"));
-    bougebougeToCurrentV($(this));
+    setVideoSelected($(this), true);
+    bougebougeToCurrentV();
   });
 
 });
 
 
-function setVideoSelected(v) {
+function setVideoSelected(v, autoplay) {
   //attribut un id au container de l'image video en cours
   fil_videos_images.attr("id", "");
   v.attr("id", "videoSelected");
+  setSrcVideoSelected(v.children("iframe").attr("src"), autoplay);
 }
 
-function setSrcVideoSelected(srcIframe) {
+function setSrcVideoSelected(srcIframe, autoplay) {
   //met la source de l'iframe en display none sur l'iframe en display block
   setTimeout(function() {
-    $(".vCurrent").attr("src", srcIframe+="?autoplay=1");
+    if(autoplay){
+        $(".vCurrent").attr("src", srcIframe+="?autoplay=1");
+    } else {
+      $(".vCurrent").attr("src", srcIframe);
+    }
+
   }, 500);
 
 }
 
-function bougebougeToCurrentV(currentImgVideo) {
+function bougebougeToCurrentV() {
 
   var indexImageVideo = $("#videoSelected").index(".v");
   topBougebouge = indexImageVideo * 16 + indexImageVideo * 5 + -0.5 + "%";
@@ -40,4 +45,11 @@ function bougebougeToCurrentV(currentImgVideo) {
   bougebouge.animate({
     top: topBougebouge
   }, 500);
+}
+
+
+function restartSectionVideos(){
+  setVideoSelected($(".v").eq(0), false);
+  topBougebouge = 0;
+  bougebougeToCurrentV();
 }

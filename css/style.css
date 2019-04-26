@@ -1,4 +1,4 @@
-@media screen and (max-width: 1060px){
+url("../images.bleu_test.jpg")@media screen and (max-width: 1060px){
   nav>ul>li{
     font-size: 90%;
   }
@@ -131,4 +131,12 @@ span{
   width: 100%;
   z-index: 100;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader>h3{
+  font-size: 5rem;
+  text-align: center;
 }

@@ -6,6 +6,7 @@ var lastScrollTop = 0;
 var inScrolling = false;
 var autoplay = false;
 var videoPresentationSource = $("iframe")[0].src;
+var currentLink;
 
 window.onload = function() {
   // window.scrollTo(0, 0);
@@ -55,14 +56,18 @@ window.onload = function() {
 
   tabLi.forEach(function(lien) {
     lien.addEventListener("click", function() {
-      if ($(this).attr("id") != "linkVideo") {
-        $("iframe")[0].src = videoPresentationSource;
-        console.log("pas id linkVideo");
+      if (currentLink == "linkVideo") {
+        $("#presentationVideo")[0].src = videoPresentationSource;
+
+        //$("#videoSelected>iframe")[0].src = $(".v").eq(0).children("iframe")[0].src;
+        //console.log("pas id linkVideo");
+      } else if (currentLink == "linkVideos") {
+        restartSectionVideos();
       }
       console.log(tabLi.indexOf(lien)); //indexOf ne marche pas sur les NodeList (=htlm element)
       window.scrollTo(0, window.innerHeight * tabLi.indexOf(lien));
       sectionCourante = tabLi.indexOf(lien);
-
+      currentLink = $(this).attr("id");
     });
   });
 
