@@ -5,6 +5,11 @@
   //background-color: red;
   flex-direction: column;
   background-image: url("../images/bleu_test2.jpg");
+  width: 100%;
+}
+
+#mainContainer{
+  width: 85%;
 }
 
 #quisuisje p{
@@ -31,9 +36,13 @@
   font-size: 1.7rem;
 }
 
+#container1, #container2{
+  //background-color: rgba(0, 0, 0, 0.45);
+  width: 100%;
+}
+
 #container1{
   height: 65%;
-  width: 85%;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -47,7 +56,6 @@
 }
 
 #container2{
-  width: 85%;
   height: 35%;
   display: flex;
 }
