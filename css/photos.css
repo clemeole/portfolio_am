@@ -15,7 +15,7 @@
   /*! background-color: rgba(0, 0, 0, 0.6); */
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
   background-image: url("../images/test2.jpg");
   background-size:  cover;
@@ -51,13 +51,14 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #currentImg>img{
   object-fit: cover;
-  height: 100%;
+  min-height: 50%;
   max-width: 70%;
+  max-height: 100%;
 }
 
 #currentImg>p{
@@ -89,7 +90,7 @@
 
 @media screen and (min-width: 1060px){
   #containerPhotos>#sousContainerPhotos>div{
-  background-color: red;
+  background-color: white;
   height: 200px;
   width: 200px;
   margin: 0.5rem;
@@ -142,45 +143,48 @@
   display: none;
 }
 
+#sousContainerPhotos>div{
+  background-color: transparent;
+}
 
 #sousContainerPhotos>div:nth-of-type(1){
   grid-row: 2;
   grid-column: 2;
-  background-image: url('../images/1.jpg');
-  background-size: cover;
+ /* background-image: url('../images/1.jpg');
+  background-size: cover;*/
 }
 
 #sousContainerPhotos>div:nth-of-type(2){
   grid-row: 2;
   grid-column: 3;
-  background-image: url('../images/2.jpg');
-  background-size: cover;
+  /*background-image: url('../images/2.jpg');
+  background-size: cover;*/
 }
 
 #sousContainerPhotos>div:nth-of-type(3){
   grid-row: 2;
   grid-column: 4;
-  background-image: url('../images/3.jpg');
-  background-size: cover;
+  /*background-image: url('../images/3.jpg');
+  background-size: cover;*/
 }
 #sousContainerPhotos>div:nth-of-type(4){
   grid-row: 3;
   grid-column: 2;
-  background-image: url('../images/4.jpeg');
-  background-size: cover;
+ /* background-image: url('../images/4.jpeg');
+  background-size: cover;*/
 }
 #sousContainerPhotos>div:nth-of-type(5){
   grid-row: 3;
   grid-column: 3;
-  background-image: url('../images/5.jpeg');
-  background-size: cover;
+  /*background-image: url('../images/5.jpeg');
+  background-size: cover;*/
 }
 
 #sousContainerPhotos>div:nth-of-type(6){
   grid-row: 3;
   grid-column: 4;
-  background-image: url('../images/6.jpeg');
-  background-size: cover;
+  /*background-image: url('../images/6.jpeg');
+  background-size: cover;*/
 }
 
 
